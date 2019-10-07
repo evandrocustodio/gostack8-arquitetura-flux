@@ -10,13 +10,13 @@ import * as CartActions from '../../store/modules/cart/actions';
 import { Container, ProductTable, Total } from './styles';
 import { formatMoeda } from '../../utils/format';
 
-function Cart({ cart, updateAmount, totalGeral, removeFromCart }) {
+function Cart({ cart, updateAmountRequest, totalGeral, removeFromCart }) {
   const increaseProd = prod => {
-    updateAmount(prod.id, prod.amount + 1);
+    updateAmountRequest(prod.id, prod.amount + 1);
   };
 
   const decreaseProd = prod => {
-    updateAmount(prod.id, prod.amount - 1);
+    updateAmountRequest(prod.id, prod.amount - 1);
   };
 
   return (
